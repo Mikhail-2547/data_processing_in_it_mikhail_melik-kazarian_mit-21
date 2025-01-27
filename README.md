@@ -1,8 +1,8 @@
-#My repo for data-processing labs
+# My repo for data-processing labs
 
 It's my first project-repo for data-processing lessons.
 
-##1 lab
+## 1 lab
 
 In my first lab, firstly, i've downloaded:
 - JDK
@@ -155,4 +155,8 @@ After reloading tomcat, i passed this link:
 
 > http://localhost:8080/HelloServletProject/hello
 
-and that's was lab 1.
+so that's it:
+
+![image](https://github.com/user-attachments/assets/2edc0b6e-802c-457c-822a-462d15c9adce)
+
+and that's was lab 1!
