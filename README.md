@@ -2,7 +2,7 @@
 
 It's my first project-repo for data-processing lessons.
 
-## 1 lab
+## lab 1
 
 In my first lab, firstly, i've downloaded:
 - JDK
