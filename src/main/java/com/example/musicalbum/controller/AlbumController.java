@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
-@RequestMapping("/api/v1/albums")
+@RequestMapping("/albums")
 @AllArgsConstructor
 public class AlbumController {
     private final AlbumService service;
@@ -39,7 +39,7 @@ public class AlbumController {
         return "album-list";
     }
 
-    @PostMapping("/add")
+    @GetMapping("/add")
     public String showAddForm(Model model) {
         model.addAttribute("album", new Album());
         return "album-form";

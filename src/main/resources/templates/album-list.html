@@ -10,7 +10,7 @@
 <body class="container mt-4">
     <h2 class="text-center">Music Albums</h2>
 
-    <a href="/api/v1/albums/add" class="btn btn-primary mb-3">Add album</a>
+    <a href="/albums/add" class="btn btn-primary mb-3">Add album</a>
     <table class="table table-striped text-center">
         <thead>
             <tr>
@@ -20,12 +20,12 @@
             </tr>
         </thead>
         <tbody>
-            <tr th:each="album : ${albums}}">
+            <tr th:each="album : ${albums}">
                 <td>
-                    <img src="${album.image_url}}" alt="IMAGE" class="album-img">
+                    <img th:src="${album.ImageUrl}" alt="IMAGE" class="album-img">
                 </td>
-                <td th:text="${album.title}"></td>
-                <td th:text="${album.author}"></td>
+                <td th:text="${album.Title}"></td>
+                <td th:text="${album.Author}"></td>
                 <td>
                     <a th:href="@{/albums/edit/{id}(id=${album.id})}" class="btn btn-warning">Edit</a>
                     <a th:href="@{/albums/delete/{id}(id=${album.id})}" class="btn btn-danger">Delete</a>

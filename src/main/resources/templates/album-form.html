@@ -11,28 +11,28 @@
 </head>
 <body class="container mt-4">
     <h2 class="text-center mb-4">Album editing</h2>
-    <div class="card shadow p-4 mx-auto" style="...">
-        <form action="/api/v1/albums/save" method="post" th:object="${album}">
+    <div class="card shadow p-4 mx-auto">
+        <form action="/albums/save" method="post" th:object="${album}">
             <input type="hidden" th:field="*{id}"> <!-- Hidden ID field -->
 
             <div class="mb-3">
                 <label for="title" class="form-label">Album's Name</label>
-                <input type="text" id="title" th:field="*{title}" class="form-control" placeholder="Type album's name..." required>
+                <input type="text" id="title" th:field="*{Title}" class="form-control" placeholder="Type album's name..." required>
             </div>
 
             <div class="mb-3">
                 <label for="author" class="form-label">Author</label>
-                <input type="text" id="author" th:field="*{author}" class="form-control" placeholder="Type album's author..." required>
+                <input type="text" id="author" th:field="*{Author}" class="form-control" placeholder="Type album's author..." required>
             </div>
 
             <div class="mb-3">
                 <label for="image_url" class="form-label">Album Image's URL</label>
-                <input type="text" id="image_url" th:field="*{image_url}" class="form-control" placeholder="Type album image's URL..." required>
+                <input type="text" id="image_url" th:field="*{ImageUrl}" class="form-control" placeholder="Type album image's URL..." required>
             </div>
 
             <div class="d-flex justify-content-between">
                 <button type="submit" class="btn btn-success">Save</button>
-                <a href="/api/v1/albums" class="btn btn-danger">Cancel</a>
+                <a href="/albums" class="btn btn-danger">Cancel</a>
             </div>
         </form>
     </div>
