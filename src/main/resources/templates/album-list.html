@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="uk" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Albums</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="container mt-4">
+    <h2 class="text-center">Music Albums</h2>
+
+    <a href="/api/v1/albums/add" class="btn btn-primary mb-3">Add album</a>
+    <table class="table table-striped text-center">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Title</th>
+                <th>Author</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="album : ${albums}}">
+                <td>
+                    <img src="${album.image_url}}" alt="IMAGE" class="album-img">
+                </td>
+                <td th:text="${album.title}"></td>
+                <td th:text="${album.author}"></td>
+                <td>
+                    <a th:href="@{/albums/edit/{id}(id=${album.id})}" class="btn btn-warning">Edit</a>
+                    <a th:href="@{/albums/delete/{id}(id=${album.id})}" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

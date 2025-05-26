@@ -34,4 +34,10 @@ public class AlbumServiceImpl implements AlbumService {
     public void deleteAlbum(Long id) {
         repository.deleteById(id);
     }
+
+    @Override
+    public Album findAlbumById(Long id) {
+        return repository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("Wrong album's ID: " + id));
+    }
 }
